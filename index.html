@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Piedra, papel o tijera</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <p class="titulo">Piedra, papel o tijeras</p>
+
+    <div class="contenedor">
+      <button
+        onclick="
+        jugar('Piedra');
+        "
+        class="movimiento-button"
+      >
+        <img
+          src="src/img/piedra-emoji.png"
+          class="icono-movimiento"
+          alt="Piedra"
+        />
+      </button>
+
+      <button
+        onclick="
+        jugar('Papel');
+    "
+        class="movimiento-button"
+      >
+        <img
+          src="src/img/papel-emoji.png"
+          class="icono-movimiento"
+          alt="Papel"
+        />
+      </button>
+
+      <button
+        onclick="
+        jugar('Tijeras');
+        "
+        class="movimiento-button"
+      >
+        <img
+          src="src/img/tijeras-emoji.png"
+          class="icono-movimiento"
+          alt="Tijeras"
+        />
+      </button>
+    </div>
+
+    <p class="js-resultado result"></p>
+    <p class="js-movimientos movimiento"></p>
+    <p class="js-puntuacion puntuacion"></p>
+
+    <div class="contenedor">
+      <button
+        onclick="
+        puntuacion.Victorias = 0;
+        puntuacion.Derrotas = 0;
+        puntuacion.Empates = 0;
+        localStorage.removeItem(`puntuacion`);
+        actualizarPuntuacionElemento();
+    "
+        class="reiniciar-button"
+      >
+        Reiniciar puntuacion
+      </button>
+    </div>
+
+    <script src="scripts/piedra-papel-tijeras.js"></script>
+  </body>
+</html>
