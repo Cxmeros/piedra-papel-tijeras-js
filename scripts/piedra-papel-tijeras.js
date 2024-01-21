@@ -68,8 +68,8 @@ let puntuacion = JSON.parse(localStorage.getItem(`puntuacion`)) || {
 
     document.querySelector(
       ".js-movimientos"
-    ).innerHTML = `Tu <img src="src/img/${movimientoJugador}-emoji.png" class="icono-movimiento">
-        <img src="src/img/${movimientoCPU}-emoji.png"class="icono-movimiento"> Computadora`;
+    ).innerHTML = `Tu <img src="img/${movimientoJugador}-emoji.png" class="icono-movimiento">
+        <img src="img/${movimientoCPU}-emoji.png"class="icono-movimiento"> Computadora`;
 
     localStorage.setItem(`puntuacion`, JSON.stringify(puntuacion));
 
